@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Pardon mon red chef</title>
+    <link rel="stylesheet" href="generateur.css">
+
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+
+<body>
+
+<h1>Pardon mon red chef</h1>
+
+<p>Las-se de vous ingénier à trouver des excuses pour ne pas rendre un article ? Notre super-calculateur les rédige à
+    votre place, de façon personnalisée ! </p>
+
+<p>Première étape</p>
+
+
+<p>Choisissez la phrase qui vous semble la plus appropriée. Cliquez sur une phrase pour accéder à la suivante</p>
+
+<div id="phrase"></div>
+
+
+<script>
+
+    var listePhrases = [
+        "Mon chat a renversé mon café sur le clavier, je ne peux plus taper.",
+        "Mes interlocuteurs sont tous en vacances.",
+        "J’ai eu des pressions pour ne pas le publier.",
+        "Internet a été débranché.",
+        "La comm’ n’a pas encore validé les citations."
+    ];
+
+
+    $(document).ready(function () {
+        document.getElementById("phrase").innerHTML = listePhrases[0];
+
+        var indicePhraseActuelle = 0;
+
+        $("#phrase").click(function () {
+            indicePhraseActuelle++;
+            $("#phrase").html(listePhrases[indicePhraseActuelle]);
+        });
+
+    });
+
+
+</script>
+
+
+</body>
+</html>
