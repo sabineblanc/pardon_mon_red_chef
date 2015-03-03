@@ -20,15 +20,12 @@
 <h4>Las-se de vous ingénier à trouver des excuses pour ne pas rendre un article ? <br>Notre super-calculateur les rédige à
     votre place, de façon personnalisée ! </h4>
 
-
-
 <h5>Première étape : à qui adressez-vous vos plus plates excuses ?</h5>
 
 <form>
     <select id="choixSexe">
 
         <option value=""></option>
-
         <option value="Chère rédactrice en cheffe,">Une femme (5% de chances à ce niveau de responsabilité)</option>
         <option value="Cher rédacteur en chef,">Un homme (95% de chances etc.)</option>
     </select>
@@ -61,8 +58,10 @@
         "Internet a été débranché.",
         "la comm’ n’a pas encore validé les citations.",
         "je dois encore croiser mes sources.",
-         "La nouvelle saison de House of cards a été mise en ligne cette nuit",
-        "Sommes-nous les plus pertinents pour traiter ce sujet ? Le doute me taraude.",
+         "la nouvelle saison de House of cards a été mise en ligne cette nuit.",
+        "j'ai passé toute la nuit à coder, mon cerveau est cramé.",
+        "la machine à café est en panne.",
+        "sommes-nous les plus pertinents pour traiter ce sujet ? Le doute me taraude."
 
     ];
 
@@ -106,7 +105,7 @@
 
                 else {
                 $("#phrase").html("Désolé, nous n'avons plus d'excuse, on repart au début.");
-                    indicePhraseActuelle = 0;
+                    indicePhraseActuelle = -1;
 
             };
 
